@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Organizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>File Organizer</h1>
+        
+        <div class="input-group">
+            <label for="folderPath">Folder Path:</label>
+            <input type="text" id="folderPath" placeholder="Enter folder path (e.g., C:\Users\YourName\Downloads)">
+            <button onclick="organizeFiles()">Organize Files</button>
+        </div>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
