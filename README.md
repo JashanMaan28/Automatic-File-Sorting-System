@@ -1,7 +1,7 @@
 
 ---
 
-# AutoSort: Automatic File Sorting System
+# Automatic File Sorting System
 
 <!-- <p align="center">
   <img src="your-image-url-here" alt="AutoSort Logo" width="200"/>
