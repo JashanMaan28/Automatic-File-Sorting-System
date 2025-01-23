@@ -1,44 +1,78 @@
-async function organizeFiles() {
-    const folderPath = document.getElementById('folderPath').value;
-    const resultDiv = document.getElementById('result');
+document.addEventListener("DOMContentLoaded", () => {
+    const folderPathInput = document.getElementById("folderPath");
+    const sortButton = document.getElementById("sortButton");
+    const themeToggle = document.getElementById("themeToggle");
 
-    if (!folderPath) {
-        alert('Please enter a folder path');
-        return;
+    // Initialize theme from localStorage
+    const savedTheme = localStorage.getItem("theme") || "light";
+    setTheme(savedTheme);
+
+    themeToggle.addEventListener("click", () => {
+        const currentTheme = document.documentElement.getAttribute("data-theme");
+        const newTheme = currentTheme === "light" ? "dark" : "light";
+        setTheme(newTheme);
+    });
+
+    function setTheme(theme) {
+        document.documentElement.setAttribute("data-theme", theme);
+        localStorage.setItem("theme", theme);
     }
 
-    try {
-        const response = await fetch('/organize', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ path: folderPath }),
-        });
+    sortButton.addEventListener("click", async () => {
+        const folderPath = folderPathInput.value.trim();
 
-        const data = await response.json();
-
-        if (data.error) {
-            resultDiv.innerHTML = `<p style="color: red;">Error: ${data.error}</p>`;
-        } else {
-            let resultHtml = '<h2>Organization Results:</h2>';
-            
-            for (const [category, files] of Object.entries(data)) {
-                resultHtml += `
-                    <div class="category">
-                        <div class="category-title">${category}</div>
-                        <div class="file-list">
-                            ${files.length > 0 ? files.join('<br>') : 'No files'}
-                        </div>
-                    </div>`;
-            }
-
-            resultDiv.innerHTML = resultHtml;
+        if (!folderPath) {
+            alert("Please enter a valid folder path!");
+            return;
         }
 
-        resultDiv.style.display = 'block';
-    } catch (error) {
-        resultDiv.innerHTML = `<p style="color: red;">Error: ${error.message}</p>`;
-        resultDiv.style.display = 'block';
+        sortButton.disabled = true;
+        sortButton.textContent = "Sorting...";
+
+        try {
+            const response = await fetch("/organize", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ path: folderPath })
+            });
+
+            const data = await response.json();
+
+            if (data.error) {
+                alert(data.error);
+                return;
+            }
+
+            updateUI(data);
+        } catch (error) {
+            console.error("Error:", error);
+            alert("An error occurred while sorting files.");
+        } finally {
+            sortButton.disabled = false;
+            sortButton.textContent = "Sort Files";
+        }
+    });
+
+    function updateUI(categories) {
+        document.querySelectorAll(".file-list").forEach((list) => {
+            list.innerHTML = ""; // Clear all file lists
+        });
+
+        for (const [category, files] of Object.entries(categories)) {
+            const fileList = document.getElementById(`${category}List`);
+
+            files.forEach((file) => {
+                const fileItem = document.createElement("div");
+                fileItem.className = "file-item";
+                fileItem.textContent = file;
+                fileList.appendChild(fileItem);
+            });
+
+            // Update file count
+            const fileCount = document.querySelector(`.folder[data-type="${category}"] .file-count`);
+            fileCount.textContent = `${files.length} file${files.length !== 1 ? "s" : ""}`;
+        }
     }
-}
+});
