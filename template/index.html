@@ -3,21 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>File Organizer</title>
+    <title>File Sync</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
-<body>
-    <div class="container">
-        <h1>File Organizer</h1>
-        
-        <div class="input-group">
-            <label for="folderPath">Folder Path:</label>
-            <input type="text" id="folderPath" placeholder="Enter folder path (e.g., C:\Users\YourName\Downloads)">
-            <button onclick="organizeFiles()">Organize Files</button>
-        </div>
-
-        <div id="result"></div>
+<body data-theme="light">
+    <div id="app">
+        <nav class="navbar">
+            <a href="/" class="logo">
+                <span class="logo-text">File Sync</span><span class="logo-dot">.</span>
+            </a>
+        </nav>
+        <main>
+            <div class="input-area">
+                <div class="folder-input-container">
+                    <input id="folderPath" class="folder-input" type="text" placeholder="Enter the folder path here...">
+                    <button id="sortButton" class="sort-button">Sort Files</button>
+                </div>
+            </div>
+            <div class="folders-container">
+                <!-- File categories -->
+                <div class="folder" data-type="images">
+                    <div class="folder-icon">🖼️</div>
+                    <h3>Images</h3>
+                    <div class="file-count">0 files</div>
+                    <div class="file-list" id="imagesList"></div>
+                </div>
+                <div class="folder" data-type="documents">
+                    <div class="folder-icon">📄</div>
+                    <h3>Documents</h3>
+                    <div class="file-count">0 files</div>
+                    <div class="file-list" id="documentsList"></div>
+                </div>
+                <div class="folder" data-type="media">
+                    <div class="folder-icon">🎵</div>
+                    <h3>Media</h3>
+                    <div class="file-count">0 files</div>
+                    <div class="file-list" id="mediaList"></div>
+                </div>
+                <div class="folder" data-type="executables">
+                    <div class="folder-icon">⚙️</div>
+                    <h3>Executables</h3>
+                    <div class="file-count">0 files</div>
+                    <div class="file-list" id="executablesList"></div>
+                </div>
+                <div class="folder" data-type="others">
+                    <div class="folder-icon">📦</div>
+                    <h3>Others</h3>
+                    <div class="file-count">0 files</div>
+                    <div class="file-list" id="othersList"></div>
+                </div>
+            </div>
+        </main>
     </div>
+
 
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
