@@ -3,15 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>File Sync</title>
+    <title>SortSync</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body data-theme="light">
     <div id="app">
         <nav class="navbar">
             <a href="/" class="logo">
-                <span class="logo-text">File Sync</span><span class="logo-dot">.</span>
+                <span class="logo-text">SortSync</span><span class="logo-dot">.</span>
             </a>
+            <div class="theme-toggle-wrapper">
+                <!-- Light and Dark Mode toggle button -->
+                <button class="theme-toggle" id="themeToggle">
+                    <span class="toggle-track">
+                        <span class="toggle-thumb"></span>
+                        <span class="toggle-sun">☀️</span>
+                        <span class="toggle-moon">🌙</span>
+                    </span>
+                </button>
+            </div>
         </nav>
         <main>
             <div class="input-area">
@@ -56,7 +66,6 @@
         </main>
     </div>
 
-
-    <script src="{{ url_for('static', filename='Js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
