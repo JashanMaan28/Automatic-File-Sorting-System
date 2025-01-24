@@ -87,7 +87,7 @@ This project is licensed under the BSD License - see the [LICENSE](LICENSE) file
 ---
 
 <p align="center">
-  Made with ❤️ by [Jashanpreet Singh](https://github.com/JashanMaan28)
+  Made with ❤️ by <a href="https://github.com/JashanMaan28">Jashanpreet Singh
 </p>
 
 ---
