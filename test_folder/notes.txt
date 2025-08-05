@@ -1,0 +1,13 @@
+Sample Text Document
+
+This is a plain text file that contains unformatted text.
+It's one of the simplest file formats and can be opened by any text editor.
+
+Contents:
+- Simple text content
+- No formatting
+- Cross-platform compatibility
+- Easy to read and edit
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

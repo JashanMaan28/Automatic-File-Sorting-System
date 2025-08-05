@@ -1,0 +1,28 @@
+# Sample 7-Zip Archive (Placeholder)
+# This represents a 7z compressed archive file
+# 
+# Archive format: 7z
+# Compression method: LZMA2
+# Dictionary size: 64MB
+# Word size: 64
+# Solid archive: Yes
+# 
+# Contents (simulated):
+# - project_files/
+#   - src/
+#     - main.cpp
+#     - header.h
+#     - makefile
+#   - docs/
+#     - manual.pdf
+#     - changelog.txt
+#   - build/
+#     - release/
+#       - app.exe
+#     - debug/
+#       - app_debug.exe
+#
+# Total files: 8
+# Original size: 12.8MB
+# Compressed size: 4.2MB
+# Compression ratio: 67%

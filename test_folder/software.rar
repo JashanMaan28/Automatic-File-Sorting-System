@@ -1,0 +1,22 @@
+# Sample RAR Archive (Placeholder)
+# This represents a RAR compressed archive file
+# 
+# Archive properties:
+# - Compression method: RAR 5.0
+# - Dictionary size: 32MB
+# - Recovery record: Yes
+# - Archive lock: No
+# 
+# Contents (simulated):
+# - software/
+#   - installer.exe
+#   - readme.txt
+#   - license.pdf
+# - drivers/
+#   - audio_driver.inf
+#   - graphics_driver.sys
+#
+# Total files: 5
+# Original size: 45.2MB
+# Compressed size: 32.1MB
+# Compression ratio: 29%

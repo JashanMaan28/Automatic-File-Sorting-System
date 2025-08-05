@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample HTML File</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .content {
+            margin: 2rem 0;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+        .feature {
+            display: flex;
+            align-items: center;
+            margin: 1rem 0;
+        }
+        .feature-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            color: #667eea;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Sample HTML Document</h1>
+        <p>This is a demonstration of HTML structure and styling</p>
+    </div>
+
+    <div class="content">
+        <h2>Features Demonstrated</h2>
+        
+        <div class="feature">
+            <span class="feature-icon">✓</span>
+            <span>Semantic HTML structure</span>
+        </div>
+        
+        <div class="feature">
+            <span class="feature-icon">✓</span>
+            <span>CSS styling and gradients</span>
+        </div>
+        
+        <div class="feature">
+            <span class="feature-icon">✓</span>
+            <span>Responsive design principles</span>
+        </div>
+        
+        <div class="feature">
+            <span class="feature-icon">✓</span>
+            <span>Modern web standards</span>
+        </div>
+    </div>
+
+    <div class="content">
+        <h2>About This File</h2>
+        <p>This HTML file serves as a sample for testing file categorization systems. 
+           It demonstrates proper HTML structure, CSS styling, and modern web development practices.</p>
+        
+        <p>The file includes:</p>
+        <ul>
+            <li>DOCTYPE declaration</li>
+            <li>Meta tags for charset and viewport</li>
+            <li>Internal CSS styling</li>
+            <li>Semantic HTML elements</li>
+            <li>Accessible design patterns</li>
+        </ul>
+    </div>
+
+    <script>
+        // Simple JavaScript to demonstrate interactivity
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Sample HTML file loaded successfully!');
+            
+            // Add click handlers to features
+            document.querySelectorAll('.feature').forEach(feature => {
+                feature.addEventListener('click', function() {
+                    this.style.backgroundColor = '#e3f2fd';
+                    setTimeout(() => {
+                        this.style.backgroundColor = 'transparent';
+                    }, 500);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

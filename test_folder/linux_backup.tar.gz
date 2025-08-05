@@ -1,0 +1,32 @@
+# Sample TAR.GZ Archive (Placeholder)
+# This represents a compressed TAR archive file
+# 
+# Archive type: TAR with GZIP compression
+# Compression level: 6 (default)
+# 
+# Contents (simulated):
+# - linux_backup/
+#   - home/
+#     - user/
+#       - documents/
+#         - file1.txt
+#         - file2.pdf
+#       - scripts/
+#         - backup.sh
+#         - cleanup.sh
+#   - etc/
+#     - config.conf
+#     - settings.ini
+#   - var/
+#     - log/
+#       - system.log
+#       - access.log
+#
+# Total files: 8
+# Total directories: 7
+# Original size: 856KB
+# Compressed size: 234KB
+# Compression ratio: 73%
+# 
+# Created on: Linux Ubuntu 22.04
+# tar command used: tar -czf linux_backup.tar.gz linux_backup/

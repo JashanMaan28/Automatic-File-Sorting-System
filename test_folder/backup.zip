@@ -1,0 +1,16 @@
+# Sample ZIP Archive (Placeholder)
+# This represents a ZIP compressed archive file
+# 
+# Contents (simulated):
+# - documents/
+#   - report.pdf
+#   - data.xlsx
+# - images/
+#   - photo1.jpg
+#   - photo2.png
+# - readme.txt
+#
+# Compression: Standard
+# Size: Original 2.5MB, Compressed 1.8MB
+# Files: 5 total
+# Created: 2025-08-04

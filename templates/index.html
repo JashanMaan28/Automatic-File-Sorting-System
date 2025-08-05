@@ -23,15 +23,23 @@
                 </svg>
                 <span class="logo-text">SortSync</span>
             </a>
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-                <svg class="theme-icon sun-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
-                    <path d="M12 1V3M12 21V23M4.22 4.22L5.64 5.64M18.36 18.36L19.78 19.78M1 12H3M21 12H23M4.22 19.78L5.64 18.36M18.36 5.64L19.78 4.22" stroke="currentColor" stroke-width="2"/>
-                </svg>
-                <svg class="theme-icon moon-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" stroke="currentColor" stroke-width="2"/>
-                </svg>
-            </button>
+            <div class="nav-actions">
+                <button class="settings-button" id="settingsButton" aria-label="Open settings">
+                    <svg class="button-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+                        <path d="M19.4 15C19.2669 15.3016 19.2272 15.6362 19.286 15.9606C19.3448 16.285 19.4995 16.5843 19.73 16.82L19.79 16.88C19.976 17.0657 20.1235 17.2863 20.2241 17.5291C20.3248 17.7719 20.3766 18.0322 20.3766 18.295C20.3766 18.5578 20.3248 18.8181 20.2241 19.0609C20.1235 19.3037 19.976 19.5243 19.79 19.71C19.6043 19.896 19.3837 20.0435 19.1409 20.1441C18.8981 20.2448 18.6378 20.2966 18.375 20.2966C18.1122 20.2966 17.8519 20.2448 17.6091 20.1441C17.3663 20.0435 17.1457 19.896 16.96 19.71L16.9 19.65C16.6643 19.4195 16.365 19.2648 16.0406 19.206C15.7162 19.1472 15.3816 19.1869 15.08 19.32C14.7842 19.4468 14.532 19.6572 14.3543 19.9255C14.1766 20.1938 14.0813 20.5082 14.08 20.83V21C14.08 21.5304 13.8693 22.0391 13.4942 22.4142C13.1191 22.7893 12.6104 23 12.08 23C11.5496 23 11.0409 22.7893 10.6658 22.4142C10.2907 22.0391 10.08 21.5304 10.08 21V20.91C10.0723 20.579 9.96512 20.2575 9.77251 19.9887C9.5799 19.7199 9.31074 19.5161 9 19.4C8.69838 19.2669 8.36381 19.2272 8.03941 19.286C7.71502 19.3448 7.41568 19.4995 7.18 19.73L7.12 19.79C6.93425 19.976 6.71368 20.1235 6.47088 20.2241C6.22808 20.3248 5.96783 20.3766 5.705 20.3766C5.44217 20.3766 5.18192 20.3248 4.93912 20.2241C4.69632 20.1235 4.47575 19.976 4.29 19.79C4.10405 19.6043 3.95653 19.3837 3.85588 19.1409C3.75523 18.8981 3.70343 18.6378 3.70343 18.375C3.70343 18.1122 3.75523 17.8519 3.85588 17.6091C3.95653 17.3663 4.10405 17.1457 4.29 16.96L4.35 16.9C4.58054 16.6643 4.73519 16.365 4.794 16.0406C4.85282 15.7162 4.81312 15.3816 4.68 15.08C4.55324 14.7842 4.34276 14.532 4.07447 14.3543C3.80618 14.1766 3.49179 14.0813 3.17 14.08H3C2.46957 14.08 1.96086 13.8693 1.58579 13.4942C1.21071 13.1191 1 12.6104 1 12.08C1 11.5496 1.21071 11.0409 1.58579 10.6658C1.96086 10.2907 2.46957 10.08 3 10.08H3.09C3.42099 10.0723 3.742 9.96512 4.0113 9.77251C4.28059 9.5799 4.48427 9.31074 4.6 9C4.73312 8.69838 4.77282 8.36381 4.714 8.03941C4.65519 7.71502 4.50054 7.41568 4.27 7.18L4.21 7.12C4.02405 6.93425 3.87653 6.71368 3.77588 6.47088C3.67523 6.22808 3.62343 5.96783 3.62343 5.705C3.62343 5.44217 3.67523 5.18192 3.77588 4.93912C3.87653 4.69632 4.02405 4.47575 4.21 4.29C4.39575 4.10405 4.61632 3.95653 4.85912 3.85588C5.10192 3.75523 5.36217 3.70343 5.625 3.70343C5.88783 3.70343 6.14808 3.75523 6.39088 3.85588C6.63368 3.95653 6.85425 4.10405 7.04 4.29L7.1 4.35C7.33568 4.58054 7.63502 4.73519 7.95941 4.794C8.28381 4.85282 8.61838 4.81312 8.92 4.68H9C9.29577 4.55324 9.54802 4.34276 9.72569 4.07447C9.90337 3.80618 9.99872 3.49179 10 3.17V3C10 2.46957 10.2107 1.96086 10.5858 1.58579C10.9609 1.21071 11.4696 1 12 1C12.5304 1 13.0391 1.21071 13.4142 1.58579C13.7893 1.96086 14 2.46957 14 3V3.09C14.0013 3.41179 14.0966 3.72618 14.2743 3.99447C14.452 4.26276 14.7042 4.47324 15 4.6C15.3016 4.73312 15.6362 4.77282 15.9606 4.714C16.285 4.65519 16.5843 4.50054 16.82 4.27L16.88 4.21C17.0657 4.02405 17.2863 3.87653 17.5291 3.77588C17.7719 3.67523 18.0322 3.62343 18.295 3.62343C18.5578 3.62343 18.8181 3.67523 19.0609 3.77588C19.3037 3.87653 19.5243 4.02405 19.71 4.21C19.896 4.39575 20.0435 4.61632 20.1441 4.85912C20.2448 5.10192 20.2966 5.36217 20.2966 5.625C20.2966 5.88783 20.2448 6.14808 20.1441 6.39088C20.0435 6.63368 19.896 6.85425 19.71 7.04L19.65 7.1C19.4195 7.33568 19.2648 7.63502 19.206 7.95941C19.1472 8.28381 19.1869 8.61838 19.32 8.92V9C19.4468 9.29577 19.6572 9.54802 19.9255 9.72569C20.1938 9.90337 20.5082 9.99872 20.83 10H21C21.5304 10 22.0391 10.2107 22.4142 10.5858C22.7893 10.9609 23 11.4696 23 12C23 12.5304 22.7893 13.0391 22.4142 13.4142C22.0391 13.7893 21.5304 14 21 14H20.91C20.5882 14.0013 20.2738 14.0966 20.0055 14.2743C19.7372 14.452 19.5268 14.7042 19.4 15Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <svg class="theme-icon sun-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+                        <path d="M12 1V3M12 21V23M4.22 4.22L5.64 5.64M18.36 18.36L19.78 19.78M1 12H3M21 12H23M4.22 19.78L5.64 18.36M18.36 5.64L19.78 4.22" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    <svg class="theme-icon moon-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -158,6 +166,44 @@
                     <div class="file-list" id="executablesList"></div>
                 </div>
 
+                <div class="category-card" data-type="code">
+                    <div class="card-header">
+                        <div class="category-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 18L22 12L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M8 6L2 12L8 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="category-info">
+                            <h3 class="category-title">Code</h3>
+                            <p class="category-description">Source code and programming files</p>
+                        </div>
+                        <div class="file-count" data-category="code">0</div>
+                    </div>
+                    <div class="file-list" id="codeList"></div>
+                </div>
+
+                <div class="category-card" data-type="archives">
+                    <div class="card-header">
+                        <div class="category-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 4H18C18.5304 4 19.0391 4.21071 19.4142 4.58579C19.7893 4.96086 20 5.46957 20 6V18C20 18.5304 19.7893 19.0391 19.4142 19.4142C19.0391 19.7893 18.5304 20 18 20H6C5.46957 20 4.96086 19.7893 4.58579 19.4142C4.21071 19.0391 4 18.5304 4 18V6C4 5.46957 4.21071 4.96086 4.58579 4.58579C4.96086 4.21071 5.46957 4 6 4H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <rect x="8" y="2" width="8" height="4" rx="1" ry="1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M8 10H10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M8 14H10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M14 10H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M14 14H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <div class="category-info">
+                            <h3 class="category-title">Archives</h3>
+                            <p class="category-description">Compressed and archive files</p>
+                        </div>
+                        <div class="file-count" data-category="archives">0</div>
+                    </div>
+                    <div class="file-list" id="archivesList"></div>
+                </div>
+
                 <div class="category-card" data-type="others">
                     <div class="card-header">
                         <div class="category-icon">
@@ -178,6 +224,272 @@
             </div>
         </div>
     </main>
+
+    <!-- Settings Modal -->
+    <div class="modal-overlay" id="settingsModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">File Categories Settings</h2>
+                <button class="modal-close" id="closeSettingsModal" aria-label="Close settings">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="modal-body">
+                <p class="settings-description">
+                    Customize file categories and their extensions. Add or remove file types to better organize your files.
+                </p>
+                
+                <div class="categories-settings">
+                    <!-- Images Category -->
+                    <div class="category-setting">
+                        <div class="category-setting-header">
+                            <div class="category-icon-wrapper">
+                                <svg class="category-setting-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2" stroke="currentColor" stroke-width="2"/>
+                                    <circle cx="8.5" cy="8.5" r="1.5" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M21 15L16 10L5 21" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <div class="category-info">
+                                <h3 class="category-name">Images</h3>
+                                <p class="category-desc">Photo and image files</p>
+                            </div>
+                            <button class="expand-button" data-category="images">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="category-extensions" id="images-extensions">
+                            <div class="extensions-list">
+                                <span class="extension-tag">.jpg</span>
+                                <span class="extension-tag">.jpeg</span>
+                                <span class="extension-tag">.png</span>
+                                <span class="extension-tag">.gif</span>
+                                <span class="extension-tag">.bmp</span>
+                                <span class="extension-tag">.svg</span>
+                                <span class="extension-tag">.webp</span>
+                            </div>
+                            <div class="add-extension">
+                                <input type="text" class="extension-input" placeholder="Add extension (e.g., .tiff)" data-category="images">
+                                <button class="add-extension-btn" data-category="images">Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Documents Category -->
+                    <div class="category-setting">
+                        <div class="category-setting-header">
+                            <div class="category-icon-wrapper">
+                                <svg class="category-setting-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                                    <path d="M14 2V8H20" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                                    <path d="M16 13H8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M16 17H8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M10 9H8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <div class="category-info">
+                                <h3 class="category-name">Documents</h3>
+                                <p class="category-desc">Text and document files</p>
+                            </div>
+                            <button class="expand-button" data-category="documents">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="category-extensions" id="documents-extensions">
+                            <div class="extensions-list">
+                                <span class="extension-tag">.pdf</span>
+                                <span class="extension-tag">.docx</span>
+                                <span class="extension-tag">.doc</span>
+                                <span class="extension-tag">.txt</span>
+                                <span class="extension-tag">.xls</span>
+                                <span class="extension-tag">.xlsx</span>
+                                <span class="extension-tag">.csv</span>
+                                <span class="extension-tag">.rtf</span>
+                            </div>
+                            <div class="add-extension">
+                                <input type="text" class="extension-input" placeholder="Add extension (e.g., .pptx)" data-category="documents">
+                                <button class="add-extension-btn" data-category="documents">Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Media Category -->
+                    <div class="category-setting">
+                        <div class="category-setting-header">
+                            <div class="category-icon-wrapper">
+                                <svg class="category-setting-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <polygon points="23 7 16 12 23 17 23 7" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                                    <rect x="1" y="5" width="15" height="14" rx="2" ry="2" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <div class="category-info">
+                                <h3 class="category-name">Media</h3>
+                                <p class="category-desc">Audio and video files</p>
+                            </div>
+                            <button class="expand-button" data-category="media">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="category-extensions" id="media-extensions">
+                            <div class="extensions-list">
+                                <span class="extension-tag">.mp3</span>
+                                <span class="extension-tag">.wav</span>
+                                <span class="extension-tag">.mp4</span>
+                                <span class="extension-tag">.avi</span>
+                                <span class="extension-tag">.mov</span>
+                                <span class="extension-tag">.mkv</span>
+                                <span class="extension-tag">.flac</span>
+                                <span class="extension-tag">.ogg</span>
+                            </div>
+                            <div class="add-extension">
+                                <input type="text" class="extension-input" placeholder="Add extension (e.g., .m4a)" data-category="media">
+                                <button class="add-extension-btn" data-category="media">Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Executables Category -->
+                    <div class="category-setting">
+                        <div class="category-setting-header">
+                            <div class="category-icon-wrapper">
+                                <svg class="category-setting-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M19.4 15C19.2669 15.3016 19.2272 15.6362 19.286 15.9606C19.3448 16.285 19.4995 16.5843 19.73 16.82L19.79 16.88C19.976 17.0657 20.1235 17.2863 20.2241 17.5291C20.3248 17.7719 20.3766 18.0322 20.3766 18.295C20.3766 18.5578 20.3248 18.8181 20.2241 19.0609C20.1235 19.3037 19.976 19.5243 19.79 19.71C19.6043 19.896 19.3837 20.0435 19.1409 20.1441C18.8981 20.2448 18.6378 20.2966 18.375 20.2966C18.1122 20.2966 17.8519 20.2448 17.6091 20.1441C17.3663 20.0435 17.1457 19.896 16.96 19.71L16.9 19.65C16.6643 19.4195 16.365 19.2648 16.0406 19.206C15.7162 19.1472 15.3816 19.1869 15.08 19.32C14.7842 19.4468 14.532 19.6572 14.3543 19.9255C14.1766 20.1938 14.0813 20.5082 14.08 20.83V21C14.08 21.5304 13.8693 22.0391 13.4942 22.4142C13.1191 22.7893 12.6104 23 12.08 23C11.5496 23 11.0409 22.7893 10.6658 22.4142C10.2907 22.0391 10.08 21.5304 10.08 21V20.91C10.0723 20.579 9.96512 20.2575 9.77251 19.9887C9.5799 19.7199 9.31074 19.5161 9 19.4C8.69838 19.2669 8.36381 19.2272 8.03941 19.286C7.71502 19.3448 7.41568 19.4995 7.18 19.73L7.12 19.79C6.93425 19.976 6.71368 20.1235 6.47088 20.2241C6.22808 20.3248 5.96783 20.3766 5.705 20.3766C5.44217 20.3766 5.18192 20.3248 4.93912 20.2241C4.69632 20.1235 4.47575 19.976 4.29 19.79C4.10405 19.6043 3.95653 19.3837 3.85588 19.1409C3.75523 18.8981 3.70343 18.6378 3.70343 18.375C3.70343 18.1122 3.75523 17.8519 3.85588 17.6091C3.95653 17.3663 4.10405 17.1457 4.29 16.96L4.35 16.9C4.58054 16.6643 4.73519 16.365 4.794 16.0406C4.85282 15.7162 4.81312 15.3816 4.68 15.08C4.55324 14.7842 4.34276 14.532 4.07447 14.3543C3.80618 14.1766 3.49179 14.0813 3.17 14.08H3C2.46957 14.08 1.96086 13.8693 1.58579 13.4942C1.21071 13.1191 1 12.6104 1 12.08C1 11.5496 1.21071 11.0409 1.58579 10.6658C1.96086 10.2907 2.46957 10.08 3 10.08H3.09C3.42099 10.0723 3.742 9.96512 4.0113 9.77251C4.28059 9.5799 4.48427 9.31074 4.6 9C4.73312 8.69838 4.77282 8.36381 4.714 8.03941C4.65519 7.71502 4.50054 7.41568 4.27 7.18L4.21 7.12C4.02405 6.93425 3.87653 6.71368 3.77588 6.47088C3.67523 6.22808 3.62343 5.96783 3.62343 5.705C3.62343 5.44217 3.67523 5.18192 3.77588 4.93912C3.87653 4.69632 4.02405 4.47575 4.21 4.29C4.39575 4.10405 4.61632 3.95653 4.85912 3.85588C5.10192 3.75523 5.36217 3.70343 5.625 3.70343C5.88783 3.70343 6.14808 3.75523 6.39088 3.85588C6.63368 3.95653 6.85425 4.10405 7.04 4.29L7.1 4.35C7.33568 4.58054 7.63502 4.73519 7.95941 4.794C8.28381 4.85282 8.61838 4.81312 8.92 4.68H9C9.29577 4.55324 9.54802 4.34276 9.72569 4.07447C9.90337 3.80618 9.99872 3.49179 10 3.17V3C10 2.46957 10.2107 1.96086 10.5858 1.58579C10.9609 1.21071 11.4696 1 12 1C12.5304 1 13.0391 1.21071 13.4142 1.58579C13.7893 1.96086 14 2.46957 14 3V3.09C14.0013 3.41179 14.0966 3.72618 14.2743 3.99447C14.452 4.26276 14.7042 4.47324 15 4.6C15.3016 4.73312 15.6362 4.77282 15.9606 4.714C16.285 4.65519 16.5843 4.50054 16.82 4.27L16.88 4.21C17.0657 4.02405 17.2863 3.87653 17.5291 3.77588C17.7719 3.67523 18.0322 3.62343 18.295 3.62343C18.5578 3.62343 18.8181 3.67523 19.0609 3.77588C19.3037 3.87653 19.5243 4.02405 19.71 4.21C19.896 4.39575 20.0435 4.61632 20.1441 4.85912C20.2448 5.10192 20.2966 5.36217 20.2966 5.625C20.2966 5.88783 20.2448 6.14808 20.1441 6.39088C20.0435 6.63368 19.896 6.85425 19.71 7.04L19.65 7.1C19.4195 7.33568 19.2648 7.63502 19.206 7.95941C19.1472 8.28381 19.1869 8.61838 19.32 8.92V9C19.4468 9.29577 19.6572 9.54802 19.9255 9.72569C20.1938 9.90337 20.5082 9.99872 20.83 10H21C21.5304 10 22.0391 10.2107 22.4142 10.5858C22.7893 10.9609 23 11.4696 23 12C23 12.5304 22.7893 13.0391 22.4142 13.4142C22.0391 13.7893 21.5304 14 21 14H20.91C20.5882 14.0013 20.2738 14.0966 20.0055 14.2743C19.7372 14.452 19.5268 14.7042 19.4 15Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="category-info">
+                                <h3 class="category-name">Executables</h3>
+                                <p class="category-desc">Applications and programs</p>
+                            </div>
+                            <button class="expand-button" data-category="executables">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="category-extensions" id="executables-extensions">
+                            <div class="extensions-list">
+                                <span class="extension-tag">.exe</span>
+                                <span class="extension-tag">.msi</span>
+                                <span class="extension-tag">.app</span>
+                                <span class="extension-tag">.sh</span>
+                                <span class="extension-tag">.bat</span>
+                                <span class="extension-tag">.cmd</span>
+                                <span class="extension-tag">.dmg</span>
+                            </div>
+                            <div class="add-extension">
+                                <input type="text" class="extension-input" placeholder="Add extension (e.g., .deb)" data-category="executables">
+                                <button class="add-extension-btn" data-category="executables">Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Code Category -->
+                    <div class="category-setting">
+                        <div class="category-setting-header">
+                            <div class="category-icon-wrapper">
+                                <svg class="category-setting-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16 18L22 12L16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M8 6L2 12L8 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="category-info">
+                                <h3 class="category-name">Code</h3>
+                                <p class="category-desc">Source code and programming files</p>
+                            </div>
+                            <button class="expand-button" data-category="code">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="category-extensions" id="code-extensions">
+                            <div class="extensions-list">
+                                <span class="extension-tag">.js</span>
+                                <span class="extension-tag">.ts</span>
+                                <span class="extension-tag">.py</span>
+                                <span class="extension-tag">.java</span>
+                                <span class="extension-tag">.cpp</span>
+                                <span class="extension-tag">.c</span>
+                                <span class="extension-tag">.html</span>
+                                <span class="extension-tag">.css</span>
+                                <span class="extension-tag">.json</span>
+                                <span class="extension-tag">.xml</span>
+                                <span class="extension-tag">.sql</span>
+                                <span class="extension-tag">.php</span>
+                                <span class="extension-tag">.rb</span>
+                                <span class="extension-tag">.go</span>
+                                <span class="extension-tag">.rs</span>
+                                <span class="extension-tag">.kt</span>
+                                <span class="extension-tag">.swift</span>
+                            </div>
+                            <div class="add-extension">
+                                <input type="text" class="extension-input" placeholder="Add extension (e.g., .vue)" data-category="code">
+                                <button class="add-extension-btn" data-category="code">Add</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Archives Category -->
+                    <div class="category-setting">
+                        <div class="category-setting-header">
+                            <div class="category-icon-wrapper">
+                                <svg class="category-setting-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16 4H18C18.5304 4 19.0391 4.21071 19.4142 4.58579C19.7893 4.96086 20 5.46957 20 6V18C20 18.5304 19.7893 19.0391 19.4142 19.4142C19.0391 19.7893 18.5304 20 18 20H6C5.46957 20 4.96086 19.7893 4.58579 19.4142C4.21071 19.0391 4 18.5304 4 18V6C4 5.46957 4.21071 4.96086 4.58579 4.58579C4.96086 4.21071 5.46957 4 6 4H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <rect x="8" y="2" width="8" height="4" rx="1" ry="1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M8 10H10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M8 14H10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M14 10H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M14 14H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <div class="category-info">
+                                <h3 class="category-name">Archives</h3>
+                                <p class="category-desc">Compressed and archive files</p>
+                            </div>
+                            <button class="expand-button" data-category="archives">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="category-extensions" id="archives-extensions">
+                            <div class="extensions-list">
+                                <span class="extension-tag">.zip</span>
+                                <span class="extension-tag">.rar</span>
+                                <span class="extension-tag">.7z</span>
+                                <span class="extension-tag">.tar</span>
+                                <span class="extension-tag">.gz</span>
+                                <span class="extension-tag">.bz2</span>
+                                <span class="extension-tag">.xz</span>
+                                <span class="extension-tag">.tar.gz</span>
+                                <span class="extension-tag">.tar.bz2</span>
+                                <span class="extension-tag">.iso</span>
+                            </div>
+                            <div class="add-extension">
+                                <input type="text" class="extension-input" placeholder="Add extension (e.g., .cab)" data-category="archives">
+                                <button class="add-extension-btn" data-category="archives">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="modal-footer">
+                <button class="btn-secondary" id="resetSettings">Reset to Default</button>
+                <button class="btn-primary" id="saveSettings">Save Changes</button>
+            </div>
+        </div>
+    </div>
 
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
