@@ -26,8 +26,14 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
+        // Add loading state
         sortButton.disabled = true;
-        sortButton.textContent = "Sorting...";
+        sortButton.classList.add('loading');
+        
+        // Add loading state to category cards
+        document.querySelectorAll('.category-card').forEach(card => {
+            card.classList.add('loading');
+        });
 
         try {
             const response = await fetch("/organize", {
@@ -50,29 +56,65 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error("Error:", error);
             alert("An error occurred while sorting files.");
         } finally {
+            // Remove loading state
             sortButton.disabled = false;
-            sortButton.textContent = "Sort Files";
+            sortButton.classList.remove('loading');
+            
+            // Remove loading state from category cards
+            document.querySelectorAll('.category-card').forEach(card => {
+                card.classList.remove('loading');
+            });
         }
     });
 
     function updateUI(categories) {
+        // Clear all file lists first
         document.querySelectorAll(".file-list").forEach((list) => {
-            list.innerHTML = ""; // Clear all file lists
+            list.innerHTML = "";
         });
 
         for (const [category, files] of Object.entries(categories)) {
             const fileList = document.getElementById(`${category}List`);
+            const categoryCard = document.querySelector(`[data-type="${category}"]`);
+            const fileCount = categoryCard.querySelector('.file-count');
 
-            files.forEach((file) => {
-                const fileItem = document.createElement("div");
-                fileItem.className = "file-item";
-                fileItem.textContent = file;
-                fileList.appendChild(fileItem);
+            // Update file count with animation
+            fileCount.textContent = files.length;
+            
+            // Add files to the list with animation
+            files.forEach((file, index) => {
+                setTimeout(() => {
+                    const fileItem = document.createElement("div");
+                    fileItem.className = "file-item";
+                    fileItem.textContent = file;
+                    fileList.appendChild(fileItem);
+                }, index * 50); // Stagger animation
             });
 
-            // Update file count
-            const fileCount = document.querySelector(`.folder[data-type="${category}"] .file-count`);
-            fileCount.textContent = `${files.length} file${files.length !== 1 ? "s" : ""}`;
+            // Add success state if files were found
+            if (files.length > 0) {
+                categoryCard.classList.add('has-files');
+                setTimeout(() => {
+                    categoryCard.classList.remove('has-files');
+                }, 1000);
+            }
         }
     }
+
+    // Add keyboard support for Enter key
+    folderPathInput.addEventListener("keypress", (event) => {
+        if (event.key === "Enter") {
+            sortButton.click();
+        }
+    });
+
+    // Add visual feedback for file input
+    folderPathInput.addEventListener("input", () => {
+        const value = folderPathInput.value.trim();
+        if (value) {
+            folderPathInput.style.borderColor = "var(--ring)";
+        } else {
+            folderPathInput.style.borderColor = "var(--border)";
+        }
+    });
 });
