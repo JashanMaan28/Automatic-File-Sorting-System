@@ -11,7 +11,7 @@
   <a href="https://github.com/JashanMaan28/Automatic-File-Sorting-System/stargazers"><img src="https://img.shields.io/github/stars/JashanMaan28/Automatic-File-Sorting-System?style=for-the-badge&color=yellow" alt="Stars"></a>
   <a href="https://github.com/JashanMaan28/Automatic-File-Sorting-System/network/members"><img src="https://img.shields.io/github/forks/JashanMaan28/Automatic-File-Sorting-System?style=for-the-badge&color=blue" alt="Forks"></a>
   <a href="https://github.com/JashanMaan28/Automatic-File-Sorting-System/issues"><img src="https://img.shields.io/github/issues/JashanMaan28/Automatic-File-Sorting-System?style=for-the-badge&color=red" alt="Issues"></a>
-  <a href="https://github.com/JashanMaan28/Automatic-File-Sorting-System/blob/main/LICENSE"><img src="https://img.shields.io/github/license/JashanMaan28/Automatic-File-Sorting-System?style=for-the-badge&color=green" alt="License"></a>
+  <a href="https://github.com/JashanMaan28/Automatic-File-Sorting-System/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge" alt="License"></a>
 </p>
 
 <p align="center">
@@ -121,14 +121,14 @@
 
 #### Before Sorting
 <p align="center">
-  <img src="screenshots/before-sorting.png" alt="Messy folder before sorting" width="600"/>
+  <img src="screenshots/before-after/before-sorting.png" alt="Messy folder before sorting" width="600"/>
   <br/>
   <em>Cluttered folder with mixed file types</em>
 </p>
 
 #### After Sorting
 <p align="center">
-  <img src="screenshots/after-sorting.png" alt="Organized folders after sorting" width="600"/>
+  <img src="screenshots/before-after/after-sorting.png" alt="Organized folders after sorting" width="600"/>
   <br/>
   <em>Clean, organized folders by category</em>
 </p>
@@ -323,15 +323,23 @@ We welcome contributions! Here's how you can help:
 
 ## 📄 License
 
-This project is licensed under the **BSD 3-Clause License** - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+
 
 ### What this means:
-- ✅ Commercial use allowed
-- ✅ Modification allowed
-- ✅ Distribution allowed
-- ✅ Private use allowed
-- ❌ No warranty provided
-- ❌ No liability accepted
+
+✅ What You Can Do (Permissions):
+- Use the code for personal or commercial projects.
+- Modify the code in any way you like.
+- Distribute the code, with or without changes.
+- Use it in closed-source or open-source projects.
+- License your modified version however you want.
+
+❌ What You Can't Do (Limitations):
+- You must include the original license and copyright notice.
+- No warranty is provided—use the code at your own risk.
+- You can’t hold the author liable for any damage or issues caused by the code.
 
 ---
 
