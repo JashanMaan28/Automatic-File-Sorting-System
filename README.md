@@ -119,19 +119,19 @@
 
 ### Test Folder Organization
 
-#### Before Sorting
-<p align="center">
-  <img src="screenshots/before-after/before-sorting.png" alt="Messy folder before sorting" width="600"/>
-  <br/>
-  <em>Cluttered folder with mixed file types</em>
-</p>
 
-#### After Sorting
-<p align="center">
-  <img src="screenshots/before-after/after-sorting.png" alt="Organized folders after sorting" width="600"/>
-  <br/>
-  <em>Clean, organized folders by category</em>
-</p>
+<div align="center" style="display: flex; gap: 32px; justify-content: center;">
+  <div>
+    <img src="screenshots/before-after/before-sorting.png" alt="Messy folder before sorting" height="600"/>
+    <br/>
+    <em>Cluttered folder with mixed file types</em>
+  </div>
+  <div>
+    <img src="screenshots/before-after/after-sorting.png" alt="Organized folders after sorting" height="600"/>
+    <br/>
+    <em>Clean, organized folders by category</em>
+  </div>
+</div>
 
 ### File Categories Breakdown
 
