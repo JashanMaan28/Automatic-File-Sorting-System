@@ -67,6 +67,23 @@
 
 ## ⚡️ Installation
 
+### 🖥️ Desktop App (Recommended)
+
+**For Windows users, there's now a ready-to-use desktop application available!**
+
+📥 **Download from Releases**: Go to the [Releases section](https://github.com/JashanMaan28/Automatic-File-Sorting-System/releases) of this repository and download:
+- **`File Sorting System Setup 1.0.0.exe`** - Professional installer with shortcuts
+
+✨ **Features of the Desktop App:**
+- Native folder browser with "Browse" button
+- No need to type folder paths manually
+- Modern desktop interface with system integration
+- Runs as a standalone Windows application
+
+### 🌐 Web Version (Manual Setup)
+
+If you prefer the web version or want to run on other platforms:
+
 ### Prerequisites
 - Python 3.7 or higher
 - Modern web browser (Chrome, Firefox, Safari, Edge)
