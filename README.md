@@ -173,7 +173,7 @@ Automatic-File-Sorting-System/
 ├── settings.json              # Persistent user settings
 ├── requirements.txt           # Python dependencies
 ├── .gitignore                # Git ignore rules
-├── LICENSE                   # BSD License
+├── LICENSE                   # MIT License
 └── README.md                 # This file
 ```
 
