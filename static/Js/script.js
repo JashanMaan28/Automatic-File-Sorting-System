@@ -8,6 +8,42 @@ document.addEventListener("DOMContentLoaded", async () => {
     const resetSettings = document.getElementById("resetSettings");
     const saveSettings = document.getElementById("saveSettings");
 
+    // Electron API integration
+    if (window.electronAPI) {
+        // Add folder selection button for Electron
+        const browseButton = document.createElement("button");
+        browseButton.innerHTML = `
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+            </svg>
+            Browse
+        `;
+        browseButton.className = "browse-btn";
+        browseButton.type = "button";
+        
+        // Find the input group and append the button
+        const inputGroup = folderPathInput.parentNode;
+        inputGroup.appendChild(browseButton);
+        
+        browseButton.addEventListener("click", async () => {
+            const selectedPath = await window.electronAPI.selectFolder();
+            if (selectedPath) {
+                folderPathInput.value = selectedPath;
+                // Trigger any input event listeners
+                folderPathInput.dispatchEvent(new Event('input', { bubbles: true }));
+            }
+        });
+
+        // Listen for menu events
+        window.electronAPI.onOpenSettings(() => {
+            settingsModal.style.display = "flex";
+        });
+
+        window.electronAPI.onNewTask(() => {
+            folderPathInput.focus();
+        });
+    }
+
     // Default categories
     const defaultCategories = {
         images: [".jpg", ".jpeg", ".png", ".gif", ".bmp", ".svg", ".webp"],

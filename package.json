@@ -1,0 +1,96 @@
+{
+  "name": "automatic-file-sorting-system",
+  "version": "1.0.0",
+  "description": "A modern desktop file organization system with Electron",
+  "main": "electron/main.js",
+  "homepage": "./",
+  "scripts": {
+    "electron": "electron .",
+    "electron-dev": "concurrently \"python app.py\" \"wait-on http://127.0.0.1:5000 && cross-env NODE_ENV=development electron .\"",
+    "build": "electron-builder",
+    "build-win": "electron-builder --win",
+    "build-mac": "electron-builder --mac",
+    "build-linux": "electron-builder --linux",
+    "dist": "npm run build",
+    "pack": "electron-builder --dir",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "build": {
+    "appId": "com.jashanmaan.file-sorting-system",
+    "productName": "File Sorting System",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "electron/**/*",
+      "static/**/*",
+      "templates/**/*",
+      "app.py",
+      "imports.py",
+      "requirements.txt"
+    ],
+    "extraResources": [
+      {
+        "from": "app.py",
+        "to": "app/app.py"
+      },
+      {
+        "from": "imports.py", 
+        "to": "app/imports.py"
+      },
+      {
+        "from": "static",
+        "to": "app/static"
+      },
+      {
+        "from": "templates",
+        "to": "app/templates"
+      },
+      {
+        "from": "requirements.txt",
+        "to": "app/requirements.txt"
+      },
+      {
+        "from": "python-dist",
+        "to": "python",
+        "filter": "**/*"
+      }
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "linux": {
+      "target": "AppImage"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  },
+  "keywords": [
+    "file",
+    "sorting",
+    "organization",
+    "desktop",
+    "electron"
+  ],
+  "author": "Jashanpreet Singh",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1",
+    "electron-reload": "^2.0.0-alpha.1",
+    "wait-on": "^7.2.0"
+  },
+  "dependencies": {
+    "electron-updater": "^6.1.7"
+  }
+}

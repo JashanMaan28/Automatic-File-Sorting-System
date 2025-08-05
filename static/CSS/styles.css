@@ -35,6 +35,38 @@
   --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 }
 
+/* Electron-specific styles */
+.browse-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 1rem 1.5rem;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  border: 1px solid var(--primary);
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: inherit;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  min-height: 52px;
+}
+
+.browse-btn:hover {
+  background: var(--primary);
+  opacity: 0.9;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.browse-btn:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-sm);
+}
+
 [data-theme="dark"] {
   --background: #0a0a0a;
   --foreground: #ededed;
@@ -640,6 +672,8 @@ body {
 .input-group {
   position: relative;
   margin-bottom: 1.5rem;
+  display: flex;
+  gap: 8px;
 }
 
 .input-icon {
@@ -655,7 +689,7 @@ body {
 }
 
 .folder-input {
-  width: 100%;
+  flex: 1;
   padding: 1rem 1rem 1rem 3rem;
   border: 1px solid var(--border);
   border-radius: var(--radius);
